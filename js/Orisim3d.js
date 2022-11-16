@@ -44,6 +44,10 @@ function completed () {
   var tag = document.getElementById("cocotte.txt");
   OR.orisim3d.command.command(tag.textContent);
 
+
+  console.log(model)
+
+
   // Launch animation
   requestAnimationFrame(loop);
 }

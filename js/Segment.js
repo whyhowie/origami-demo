@@ -220,6 +220,7 @@ OR.Segment.closestLine = function closestLine(s1, s2) {
     var c2 = OR.Point.add(s2.p1, v2.scale(t2)); // c2 = p1+t2*(p2-p1)
     closest = new OR.Segment(c1, c2);
   }
+  // console.log(closest.length2d())
   return closest;
 };
 

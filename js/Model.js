@@ -524,10 +524,13 @@ OR.Model = function (list) {
     var x    = p1.x + k * (p2.x - p1.x);
     var y    = p1.y + k * (p2.y - p1.y);
     var z    = p1.z + k * (p2.z - p1.z);
+
     // e is on p1p2 symmetric of p0
     var e    = new OR.Point(x, y, z);
+    // find the midpoint of segment p0e
+    var mp = OR.Point.add(p0, OR.Point.sub(e,p0).scale(0.5))
     // Define Plane
-    var pl   = OR.Plane.by(p0, e);
+    var pl   = OR.Plane.by(p1, mp);
     this.splitFacesByPlane(pl, list);
   }
 
