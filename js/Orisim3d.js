@@ -45,7 +45,7 @@ function completed () {
   OR.orisim3d.command.command(tag.textContent);
 
 
-  console.log(model)
+  // console.log(model)
 
 
   // Launch animation
