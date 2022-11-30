@@ -2,6 +2,7 @@
 // Dependencies : import them before View3d.js in browser （Using THREE.js)
 if (NODE_ENV === true && typeof module !== 'undefined' && module.exports) {
   var Model = require('./Model.js');
+  var THREE = require('./three.module.js');
 }
 
 // View3d
@@ -13,7 +14,16 @@ function View3d (modele, canvas3dElt) {
   var gl           = canvas3d.getContext('webgl') || canvas3d.getContext('experimental-webgl');
   var scope = this;
 
+  
+
+
+
+
+
+
+
   // Initialisation
+  const renderer = new THREE.WebGLRenderer({canvas: canvas3d});
   initWebGL();
 
   // Intialization
@@ -22,7 +32,6 @@ function View3d (modele, canvas3dElt) {
     initTextures();
     initPerspective();
     initMouseListeners();
-    // this.initBuffers(); // No need here, will be called by requestAnimationFrame
   }
 
   // Shaders
