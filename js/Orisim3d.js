@@ -4,7 +4,7 @@ if (NODE_ENV === true && typeof module !== 'undefined' && module.exports) {
   var OR = OR || {};
   OR.Model = require('./Model.js');
   OR.View2d = require('./View2d.js');
-  OR.View3d = require('./View3d.js');
+  OR.View3d = require('./View3dTHREE.js');
   OR.Command = require('./Command.js');
   OR.CommandArea = require('./CommandArea.js');
 }

@@ -527,7 +527,7 @@ OR.Model = function (list) {
 
     // e is on p1p2 symmetric of p0
     var e    = new OR.Point(x, y, z);
-    // find the midpoint of segment p0e
+    // find the midpoint of segment p0e (fixed by Howie)
     var mp = OR.Point.add(p0, OR.Point.sub(e,p0).scale(0.5))
     // Define Plane
     var pl   = OR.Plane.by(p1, mp);
