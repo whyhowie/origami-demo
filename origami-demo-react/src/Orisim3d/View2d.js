@@ -1,5 +1,14 @@
+const NODE_ENV = true;
+
 // File: js/View2d.js
 // Dependencies : import them before View2d.js in browser
+if (NODE_ENV === true && typeof module !== 'undefined' && module.exports) {
+  var OR = OR || {};
+  OR.Model = require('./Model.js');
+  OR.Point = require('./Point.js');
+  OR.Segment = require('./Segment.js');
+
+}
 
 // View2d Constructor
 function View2d (model, canvas2d) {
@@ -211,5 +220,9 @@ function View2d (model, canvas2d) {
   this.drawFaces = drawFaces;
   this.draw = draw;
 }
-
+// Just for Node.js
+// if (NODE_ENV === true && typeof module !== 'undefined' && module.exports) {
+//   module.exports = View2d;
+  
+// }
 export default View2d

@@ -1,9 +1,13 @@
-import OR from './OR.js'
-import View3d from './View3dTHREE.js';
-import View2d from './View2d.js'
-
 // Main Entry Point : Orisim3D
 // NodeJS dependencies : import them before Orisim3d.js
+if (NODE_ENV === true && typeof module !== 'undefined' && module.exports) {
+  var OR = OR || {};
+  OR.Model = require('./Model.js');
+  OR.View2d = require('./View2d.js');
+  OR.View3d = require('./View3dTHREE.js');
+  OR.Command = require('./Command.js');
+  OR.CommandArea = require('./CommandArea.js');
+}
 
 // Main Module
 function Orisim3d(model, view2d, view3d, command) {

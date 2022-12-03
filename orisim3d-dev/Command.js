@@ -1,3 +1,5 @@
+import * as fs from 'fs'
+
 // File: js/Command.js
 // Dependencies : import them before Command.js in browser
 if (NODE_ENV === true && typeof module !== 'undefined' && module.exports) {
